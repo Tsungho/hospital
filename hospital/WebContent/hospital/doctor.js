@@ -51,7 +51,7 @@ Doctor.prototype.getAddress = function(){
 }
 
 Doctor.prototype.toString = function(){
-	return 'doctorNumber : ' + this.doctorNumber
-	+', doctorName : ' + this.doctorName + ', ssNumber : ' + this.ssNumber
-	+', eMail : ' + this.eMail + ', address : ' + this.address + ', deptNo : ' + this.deptNo;
+	return '의사번호 : ' + this.doctorNumber
+	+'\n이름 : ' + this.doctorName + '\n주민번호 : ' + this.ssNumber
+	+'\neMail : ' + this.eMail + '\n주소 : ' + this.address + '\n진료과 : ' + this.deptNo;
 };

@@ -55,10 +55,10 @@ Petient.prototype.setAddress = function(address){
 }
 //------------------------------------------------------
 Petient.prototype.toString = function(){
-	return 'patientNumber : ' + this.patientNumber +
-	'petientName : ' + this.petientName + 
-	'disName : ' + this.disName +
-	'ssNumber : ' + this.ssNumber +
-	'phoneNumber : ' + this.phoneNumber +
-	'address : ' + this.address ;
+	return '환자번호 : ' + this.patientNumber +
+	'\n이름 : ' + this.petientName + 
+	'\n병명 : ' + this.disName +
+	'\n주민번호 : ' + this.ssNumber +
+	'\n전화번호 : ' + this.phoneNumber +
+	'\n주소 : ' + this.address ;
 }
