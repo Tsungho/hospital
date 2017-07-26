@@ -6,8 +6,8 @@ function Treat(treatNumber, inscription, treatcontent, doctorNumber, patientNumb
 	this.treatNumber = treatNumber;	//진료번호
 	this.inscription = inscription;	//처방내용
 	this.treatcontent = treatcontent;	//진료내용
-	this.doctorNumber = doctorNumber;	//의사번호
-	this.patientNumber = patientNumber;	//환자번호
+	Doctor.call(this, doctorNumber);//의사번호
+	Petient.call(this, patientNumber);//환자번호
 }
 
 Treat.prototype.setTreatNumber = function(treatNumber){
@@ -31,18 +31,6 @@ Treat.prototype.getTreatcontent = function(){
 	return this.treatcontent;
 };
 
-Treat.prototype.setDoctorNumber = function(doctorNumber){
-	this.doctorNumber = doctorNumber;
-};
-Treat.prototype.getDoctorNumber = function(){
-	return this.doctorNumber;
-};
-Treat.prototype.setPatientNumber = function(patientNumber){
-	this.patientNumber = patientNumber;
-};
-Treat.prototype.getPatientNumber = function(){
-	return this.patientNumber;
-};
 
 Treat.prototype.toString = function(){
 	return 'treatNumber : ' + this.treatNumber

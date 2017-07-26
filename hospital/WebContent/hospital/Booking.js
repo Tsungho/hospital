@@ -2,29 +2,33 @@
  * 예약
 */
 
-function Booking(bookingNo, bookingDate, doctorNo, petientNo){
+function Booking(bookingNo, bookingDate, doctorNumber, patientNumber){
 bookingNo = bookingNo; //예약 번호
 bookingDate = bookingDate;//예약 날짜
-doctorNo = doctorNo;//의사번호
-petientNo=petientNo;//환자번호
+Doctor.call(this, doctorNumber);//의사번호
+Petient.call(this, patientNumber);//환자번호
 
 }
 
-
-Booking.prototype.getBookingNo = function(){return this.bookingNo;}
-Booking.prototype.setBookingNo = function(bookingNo){this.bookingNo = bookingNo;}
+//세터겟터
 //------------------------------------------------------
-Booking.prototype.getBookingDate = function(){return this.bookingDate;}
-Booking.prototype.setBookingDate = function(bookingDate){this.bookingDate = bookingDate;}
+Booking.prototype.getBookingNo = function(){
+	return this.bookingNo;
+}
+Booking.prototype.setBookingNo = function(bookingNo){
+	this.bookingNo = bookingNo;
+}
 //------------------------------------------------------
-Booking.prototype.getDoctorNo = function(){return this.doctorNo;}
-Booking.prototype.setDoctorNo = function(doctorNo){this.doctorNo = doctorNo;}
+Booking.prototype.getBookingDate = function(){
+	return this.bookingDate;
+}
+Booking.prototype.setBookingDate = function(bookingDate){
+	this.bookingDate = bookingDate;
+}
 //------------------------------------------------------
-Booking.prototype.getPetientNo = function(){return this.petientNo;}
-Booking.prototype.setPetientNo = function(petientNo){this.petientNo = petientNo;}
-//------------------------------------------------------
-Booking.prototype.toString = function(){return 'bookingNo : ' + this.bookingNo +
-											   'bookingDate : ' + this.bookingDate + 
-											   'doctorNo : ' + this.doctorNo +
-											   'petientNo : ' + this.petientNo ;
+Booking.prototype.toString = function(){
+	return 'bookingNo : ' + this.bookingNo +
+	'bookingDate : ' + this.bookingDate + 
+	'doctorNumber : ' + this.doctorNumber +
+	'patientNumber : ' + this.patientNumber ;
 }
