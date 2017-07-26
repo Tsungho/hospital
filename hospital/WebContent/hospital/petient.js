@@ -12,6 +12,8 @@ function Petient(patientNumber, petientName, disName, ssNumber, phoneNumber, add
 
 }
 
+//Getter & Setter
+//======================================================
 Petient.prototype.getPatientNumber = function(){
 	return this.patientNumber;
 }
@@ -62,3 +64,22 @@ Petient.prototype.toString = function(){
 	'phoneNumber : ' + this.phoneNumber +
 	'address : ' + this.address ;
 }
+
+//쿼리문
+//======================================================
+//--치료 진행
+//---
+petient.prototype.acptBooking = function(){
+	console.log('예약이 접수되었습니다.');
+}
+//---
+//---
+//---
+//---
+
+
+
+
+
+
+

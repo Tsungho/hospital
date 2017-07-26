@@ -10,8 +10,8 @@ Petient.call(this, patientNumber);//환자번호
 
 }
 
-//세터겟터
-//------------------------------------------------------
+//Getter & Setter
+//======================================================
 Booking.prototype.getBookingNo = function(){
 	return this.bookingNo;
 }
@@ -32,3 +32,30 @@ Booking.prototype.toString = function(){
 	'doctorNumber : ' + this.doctorNumber +
 	'patientNumber : ' + this.patientNumber ;
 }
+
+//쿼리문
+//======================================================
+//--예약 접수
+//---
+petient.prototype.acptBooking = function(){
+	console.log('예약이 접수되었습니다.');
+}
+//---
+//---
+//---
+//---
+
+//------------------------------------------------------
+//--예약 취소
+//---
+petient.prototype.rescBooking = function(){
+	console.log('예약이 취소되었습니다.');
+
+}
+//---
+//---
+//---
+//---
+
+
+
