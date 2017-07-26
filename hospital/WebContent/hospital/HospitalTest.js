@@ -44,8 +44,8 @@ petient.forEach(function(num){
 //	console.log('--------------------------------------------------------------');
 //});
 
-console.log(petient[0].inHospital());
-console.log(doctor[0].treat(petient[0]));
+console.log(petient[0].inHospital());//병원 입장
+console.log(doctor[0].treat(petient[0])); //진료
 
 
 
