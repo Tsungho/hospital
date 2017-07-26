@@ -9,12 +9,11 @@ function Doctor(doctorNumber, doctorName, ssNumber, eMail, address, deptNo){
 	this.ssNumber = ssNumber;
 	this.eMail = eMail;
 	this.address = address;
-	DeptMedicine.call(this, deptNo);
+	this.deptNo = deptNo;
 }
 
-Doctor.prototype = new DeptMedicine();
 
-
+//셋터겟터------------------------------------------------------------------
 Doctor.prototype.setDoctorNumber = function(doctorNumber){
 	this.doctorNumber = doctorNumber;
 }
@@ -49,6 +48,17 @@ Doctor.prototype.setAddress = function(address){
 Doctor.prototype.getAddress = function(){
 	return this.address;
 }
+
+//행동 메소드 - --------------------------------------------------------
+
+Doctor.prototype.treat = function (petient){
+	return this.deptNo + ' ' + this.doctorName + ' 의사에게 ' 
+	+ petient.getDisName() + ' 병명으로 ' + petient.getPetientName() + '님이 진료 받았습니다.';
+}
+
+
+
+
 
 Doctor.prototype.toString = function(){
 	return '의사번호 : ' + this.doctorNumber
