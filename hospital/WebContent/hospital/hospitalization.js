@@ -11,6 +11,10 @@ function Hospitalization(hospitalizationNumber, hospitalizationDate, dischargeDa
 	Treat.call(this, treatNumber);	//진료번호
 }
 
+Hospitalization.prototype = new Petient();
+Hospitalization.prototype = new Treat();
+
+
 Hospitalization.prototype.setHospitalizationNumber = function(hospitalizationNumber){
 	this.hospitalizationNumber = hospitalizationNumber;
 };

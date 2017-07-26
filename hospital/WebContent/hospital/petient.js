@@ -3,14 +3,15 @@
 */
 
 function Petient(patientNumber, petientName, disName, ssNumber, phoneNumber, address){
-	patientNumber = patientNumber;//환자번호
-	petientName = petientName;//환자이름
-	disName = disName;//병명
-	ssNumber = ssNumber;//주민번호
-	phoneNumber = phoneNumber;//전화번호
-	address = address;//주소
+	this.patientNumber = patientNumber;//환자번호
+	this.petientName = petientName;//환자이름
+	this.disName = disName;//병명
+	this.ssNumber = ssNumber;//주민번호
+	this.phoneNumber = phoneNumber;//전화번호
+	this.address = address;//주소
 
 }
+
 
 //Getter & Setter
 //======================================================
@@ -56,30 +57,25 @@ Petient.prototype.setAddress = function(address){
 	this.address = address;
 }
 //------------------------------------------------------
+//행동메소드
+Petient.prototype.inHospital = function(){
+	return this.petientName + '님이 병원에 들어오셨습니다.';
+}
+
+
+
+
+
+
+
+
+
 Petient.prototype.toString = function(){
-	return 'patientNumber : ' + this.patientNumber +
-	'petientName : ' + this.petientName + 
-	'disName : ' + this.disName +
-	'ssNumber : ' + this.ssNumber +
-	'phoneNumber : ' + this.phoneNumber +
-	'address : ' + this.address ;
+	return '환자번호 : ' + this.patientNumber +
+	'\n이름 : ' + this.petientName + 
+	'\n병명 : ' + this.disName +
+	'\n주민번호 : ' + this.ssNumber +
+	'\n전화번호 : ' + this.phoneNumber +
+	'\n주소 : ' + this.address ;
 }
-
-//쿼리문
-//======================================================
-//--치료 진행
-//---
-petient.prototype.acptBooking = function(){
-	console.log('예약이 접수되었습니다.');
-}
-//---
-//---
-//---
-//---
-
-
-
-
-
-
 

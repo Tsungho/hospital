@@ -3,15 +3,22 @@
 */
 
 function Booking(bookingNo, bookingDate, doctorNumber, patientNumber){
-bookingNo = bookingNo; //예약 번호
-bookingDate = bookingDate;//예약 날짜
+this.bookingNo = bookingNo; //예약 번호
+this.bookingDate = bookingDate;//예약 날짜
 Doctor.call(this, doctorNumber);//의사번호
 Petient.call(this, patientNumber);//환자번호
 
 }
 
+
 //Getter & Setter
 //======================================================
+
+Booking.prototype = new Doctor();
+Booking.prototype = new Petient();
+
+
+
 Booking.prototype.getBookingNo = function(){
 	return this.bookingNo;
 }
