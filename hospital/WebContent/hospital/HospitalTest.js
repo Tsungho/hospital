@@ -44,6 +44,7 @@ petient.forEach(function(num){
 //	console.log('--------------------------------------------------------------');
 //});
 
+console.log(petient[0].inHospital());
 console.log(doctor[0].treat(petient[0]));
 
 
