@@ -3,7 +3,7 @@
  */
 
 
-function Doctor(doctorNumber, deptName, ssNumber, eMail, address, deptNo){
+function Doctor(doctorNumber, doctorName, ssNumber, eMail, address, deptNo){
 	this.doctorNumber = doctorNumber;
 	this.doctorName = doctorName;
 	this.ssNumber = ssNumber;
@@ -11,6 +11,9 @@ function Doctor(doctorNumber, deptName, ssNumber, eMail, address, deptNo){
 	this.address = address;
 	DeptMedicine.call(this, deptNo);
 }
+
+Doctor.prototype = new DeptMedicine();
+
 
 Doctor.prototype.setDoctorNumber = function(doctorNumber){
 	this.doctorNumber = doctorNumber;
@@ -47,3 +50,8 @@ Doctor.prototype.getAddress = function(){
 	return this.address;
 }
 
+Doctor.prototype.toString = function(){
+	return 'doctorNumber : ' + this.doctorNumber
+	+', doctorName : ' + this.doctorName + ', ssNumber : ' + this.ssNumber
+	+', eMail : ' + this.eMail + ', address : ' + this.address + ', deptNo : ' + this.deptNo;
+};

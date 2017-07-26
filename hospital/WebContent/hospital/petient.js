@@ -3,12 +3,12 @@
 */
 
 function Petient(patientNumber, petientName, disName, ssNumber, phoneNumber, address){
-	patientNumber = patientNumber;//환자번호
-	petientName = petientName;//환자이름
-	disName = disName;//병명
-	ssNumber = ssNumber;//주민번호
-	phoneNumber = phoneNumber;//전화번호
-	address = address;//주소
+	this.patientNumber = patientNumber;//환자번호
+	this.petientName = petientName;//환자이름
+	this.disName = disName;//병명
+	this.ssNumber = ssNumber;//주민번호
+	this.phoneNumber = phoneNumber;//전화번호
+	this.address = address;//주소
 
 }
 

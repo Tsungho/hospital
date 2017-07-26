@@ -10,6 +10,10 @@ function Treat(treatNumber, inscription, treatcontent, doctorNumber, patientNumb
 	Petient.call(this, patientNumber);//환자번호
 }
 
+Treat.prototype = new Doctor();
+Treat.prototype = new Petient();
+
+
 Treat.prototype.setTreatNumber = function(treatNumber){
 	this.treatNumber = treatNumber;
 };
